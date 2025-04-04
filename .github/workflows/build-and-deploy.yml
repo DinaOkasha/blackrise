@@ -33,9 +33,9 @@ jobs:
 
     - name: Restore and Build
       run: |
-        dotnet restore
-        dotnet build --configuration Release
-        dotnet publish --configuration Release --output ./out
+        dotnet restore SimpleApi/SimpleApi.csproj
+        dotnet build SimpleApi/SimpleApi.csproj --configuration Release
+        dotnet publish SimpleApi/SimpleApi.csproj --configuration Release --output ./out
 
     - name: Authenticate to Amazon ECR
       run: |
