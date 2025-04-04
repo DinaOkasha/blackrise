@@ -33,7 +33,6 @@ jobs:
 
     - name: Restore and Build
       run: |
-        cd SimpleApi
         dotnet restore
         dotnet build --configuration Release
         dotnet publish --configuration Release --output ./out
