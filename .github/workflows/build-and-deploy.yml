@@ -43,8 +43,7 @@ jobs:
 
     - name: Build Docker image
       run: |
-        cd SimpleApi
-        docker build -t $ECR_REPOSITORY:latest .
+        docker build -t $ECR_REPOSITORY:latest SimpleApi/
 
     - name: Tag Docker image
       run: |
